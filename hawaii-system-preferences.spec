@@ -1,3 +1,7 @@
+%define major 0
+%define libname %mklibname HawaiiSystemPreferences %{major}
+%define develname %mklibname HawaiiSystemPreferences -d
+
 Summary:	Hawaii system preferences
 Name:		hawaii-system-preferences
 Version:	0.2.0
@@ -6,6 +10,7 @@ License:	GPLv2+
 Group:		Graphical desktop/Other
 URL:		http://www.maui-project.org
 Source0:	http://downloads.sourceforge.net/project/mauios/hawaii/%{name}/%{name}-%{version}.tar.gz
+Requires:	%{libname} = %{EVRD}
 BuildRequires:	cmake
 BuildRequires:	qt5-devel
 BuildRequires:	cmake(QtConfiguration)
@@ -23,6 +28,21 @@ prog %{name} = {
 %description
 Hawaii system preferences.
 
+%package -n %{libname}
+Summary:	Main library for %{name}
+Group:		System/Libraries
+
+%description -n %{libname}
+Main library for %{name}.
+
+%package -n %{develname}
+Summary:	Development files for %{name}
+Group:		Developmnet/C++
+Requires:	%{libname} = %{EVRD}
+
+%description %{develname}
+Development files and headers for %{name}.
+
 %prep
 %setup -q
 
@@ -34,3 +54,18 @@ Hawaii system preferences.
 %makeinstall_std -C build
 
 %files
+%{_bindir}/hawaii-system-preferences
+%{_libdir}/hawaii/plugins/preferences/*.so
+%{_datadir}/applications/*.desktop
+%{_datadir}/hawaii-system-preferences/plugins/background/translations/*.qm
+%{_datadir}/hawaii-system-preferences/translations/*.qm
+
+%files -n %{libname}
+%{_libdir}/libHawaiiSystemPreferences.so.%{major}*
+
+%files -n %{develname}
+%{_includedir}/Hawaii/SystemPreferences/PreferencesModule
+%{_includedir}/Hawaii/SystemPreferences/PreferencesModulePlugin
+%{_includedir}/Hawaii/SystemPreferences/SystemPreferencesExport
+%{_includedir}/Hawaii/SystemPreferences/*.h
+%{_libdir}/libHawaiiSystemPreferences.so
