@@ -57,6 +57,7 @@ Development files and headers for %{name}.
 %{_bindir}/hawaii-system-preferences
 %{_libdir}/hawaii/plugins/preferences/*.so
 %{_datadir}/applications/*.desktop
+%{_datadir}/hawaii-system-preferences/plugins/desktop/translations/*.qm
 %{_datadir}/hawaii-system-preferences/plugins/background/translations/*.qm
 %{_datadir}/hawaii-system-preferences/translations/*.qm
 
