@@ -10,6 +10,7 @@ License:	GPLv2+
 Group:		Graphical desktop/Other
 URL:		http://www.maui-project.org
 Source0:	http://downloads.sourceforge.net/project/mauios/hawaii/%{name}/%{name}-%{version}.tar.gz
+Source1:	hawaii-system-preferences.rpmlintrc
 Requires:	%{libname} = %{EVRD}
 BuildRequires:	cmake
 BuildRequires:	qt5-devel
