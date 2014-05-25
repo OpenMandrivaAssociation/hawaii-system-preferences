@@ -38,7 +38,7 @@ Main library for %{name}.
 
 %package -n %{develname}
 Summary:	Development files for %{name}
-Group:		Developmnet/C++
+Group:		Development/C++
 Requires:	%{libname} = %{EVRD}
 
 %description -n %{develname}
