@@ -40,7 +40,7 @@ Summary:	Development files for %{name}
 Group:		Developmnet/C++
 Requires:	%{libname} = %{EVRD}
 
-%description %{develname}
+%description -n %{develname}
 Development files and headers for %{name}.
 
 %prep
