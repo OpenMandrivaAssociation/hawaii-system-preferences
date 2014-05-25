@@ -8,10 +8,11 @@ URL:		http://www.maui-project.org
 Source0:	http://downloads.sourceforge.net/project/mauios/hawaii/%{name}/%{name}-%{version}.tar.gz
 BuildRequires:	cmake
 BuildRequires:	qt5-devel
-BuildRequires:	qtconfiguration-devel
-BuildRequires:	qtaccountsservice-devel
+BuildRequires:	cmake(Qtconfiguration)
+BuildRequires:	cmake(Qtaccountsservice)
 BuildRequires:	polkit-qt5-1-devel
 BuildRequires:	cmake(Qt5LinguistTools)
+BuildRequires:	cmake(PolkitQt-1)
 
 %track
 prog %{name} = {
