@@ -11,6 +11,7 @@ BuildRequires:	qt5-devel
 BuildRequires:	qtconfiguration-devel
 BuildRequires:	qtaccountsservice-devel
 BuildRequires:	polkit-qt5-1-devel
+BuildRequires:	cmake(Qt5LinguistTools)
 
 %track
 prog %{name} = {
