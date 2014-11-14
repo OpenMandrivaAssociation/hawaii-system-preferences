@@ -1,7 +1,3 @@
-%define major 0
-%define libname %mklibname HawaiiSystemPreferences %{major}
-%define develname %mklibname HawaiiSystemPreferences -d
-
 Summary:	Hawaii system preferences
 Name:		hawaii-system-preferences
 Version:	0.3.0
@@ -30,21 +26,6 @@ prog %{name} = {
 %description
 Hawaii system preferences.
 
-%package -n %{libname}
-Summary:	Main library for %{name}
-Group:		System/Libraries
-
-%description -n %{libname}
-Main library for %{name}.
-
-%package -n %{develname}
-Summary:	Development files for %{name}
-Group:		Development/C++
-Requires:	%{libname} = %{EVRD}
-
-%description -n %{develname}
-Development files and headers for %{name}.
-
 %prep
 %setup -q
 
@@ -56,19 +37,19 @@ Development files and headers for %{name}.
 %makeinstall_std -C build
 
 %files
+%dir %{_datadir}/hawaii/preferences
+%dir %{_datadir}/hawaii-system-preferences
+%dir %{_datadir}/hawaii-system-preferences/translations
+%dir %{_datadir}/hawaii/preferences/org.hawaii.preferences.background
+%dir %{_datadir}/hawaii/preferences/org.hawaii.preferences.desktop
+%dir %{_datadir}/hawaii/preferences/org.hawaii.preferences.keyboard
+%dir %{_datadir}/hawaii/preferences/org.hawaii.preferences.network
 %{_bindir}/hawaii-system-preferences
-%{_libdir}/hawaii/plugins/preferences/*.so
-%{_datadir}/applications/*.desktop
-%{_datadir}/hawaii-system-preferences/plugins/desktop/translations/*.qm
-%{_datadir}/hawaii-system-preferences/plugins/background/translations/*.qm
+%{_libdir}/hawaii/qml/Hawaii/SystemPreferences/Background/libbackgroundplugin.so
+%{_libdir}/hawaii/qml/Hawaii/SystemPreferences/Background/qmldir
+%{_datadir}/applications/hawaii-*.desktop
+%{_datadir}/hawaii/preferences/org.hawaii.preferences.background/*
+%{_datadir}/hawaii/preferences/org.hawaii.preferences.desktop/*
+%{_datadir}/hawaii/preferences/org.hawaii.preferences.keyboard/*
+%{_datadir}/hawaii/preferences/org.hawaii.preferences.network/*
 %{_datadir}/hawaii-system-preferences/translations/*.qm
-
-%files -n %{libname}
-%{_libdir}/libHawaiiSystemPreferences.so.%{major}*
-
-%files -n %{develname}
-%{_includedir}/Hawaii/SystemPreferences/PreferencesModule
-%{_includedir}/Hawaii/SystemPreferences/PreferencesModulePlugin
-%{_includedir}/Hawaii/SystemPreferences/SystemPreferencesExport
-%{_includedir}/Hawaii/SystemPreferences/*.h
-%{_libdir}/libHawaiiSystemPreferences.so
