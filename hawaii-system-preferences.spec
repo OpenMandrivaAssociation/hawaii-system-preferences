@@ -17,7 +17,7 @@ BuildRequires:	qt5-devel
 BuildRequires:	cmake(QtConfiguration)
 BuildRequires:	cmake(QtAccountsService)
 BuildRequires:	cmake(Qt5LinguistTools)
-BuildRequires:	cmake(PolkitQt-1)
+BuildRequires:	pkgconfig(polkit-qt5-1)
 BuildRequires:	libhawaii-devel
 
 %track
