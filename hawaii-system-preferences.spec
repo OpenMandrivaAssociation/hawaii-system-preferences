@@ -45,6 +45,7 @@ Hawaii system preferences.
 %dir %{_datadir}/hawaii-system-preferences/shells/org.hawaii.systempreferences
 %dir %{_datadir}/hawaii-system-preferences/modules/hawaii/org.hawaii.systempreferences.background
 %dir %{_datadir}/hawaii-system-preferences/modules/hawaii/org.hawaii.systempreferences.keyboard
+%dir %{_datadir}/hawaii-system-preferences/translations
 %{_bindir}/hawaii-system-preferences
 %{_libdir}/qml/org/hawaii/systempreferences/background/libbackgroundplugin.so
 %{_libdir}/qml/org/hawaii/systempreferences/background/qmldir
