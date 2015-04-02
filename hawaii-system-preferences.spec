@@ -1,19 +1,21 @@
 Summary:	Hawaii system preferences
 Name:		hawaii-system-preferences
-Version:	0.3.0
-Release:	3
+Version:	0.4.0
+Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/Other
 URL:		http://www.maui-project.org
 Source0:	http://downloads.sourceforge.net/project/mauios/hawaii/%{name}/%{name}-%{version}.tar.gz
 Source1:	hawaii-system-preferences.rpmlintrc
 BuildRequires:	cmake
-BuildRequires:	qt5-devel
-BuildRequires:	cmake(QtConfiguration)
-BuildRequires:	cmake(QtAccountsService)
+BuildRequires:	cmake(ECM)
+BuildRequires:	cmake(Qt5Core)
+BuildRequires:	cmake(Qt5Gui)
+BuildRequires:	cmake(Qt5Widgets)
+BuildRequires:	cmake(Qt5Qml)
+BuildRequires:	cmake(Qt5Quick)
 BuildRequires:	cmake(Qt5LinguistTools)
 BuildRequires:	pkgconfig(polkit-qt5-1)
-BuildRequires:	libhawaii-devel
 
 %track
 prog %{name} = {
