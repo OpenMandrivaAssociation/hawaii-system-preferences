@@ -38,19 +38,16 @@ Hawaii system preferences.
 %makeinstall_std -C build
 
 %files
-%dir %{_datadir}/hawaii/preferences
-%dir %{_datadir}/hawaii-system-preferences
-%dir %{_datadir}/hawaii-system-preferences/translations
-%dir %{_datadir}/hawaii/preferences/org.hawaii.preferences.background
-%dir %{_datadir}/hawaii/preferences/org.hawaii.preferences.desktop
-%dir %{_datadir}/hawaii/preferences/org.hawaii.preferences.keyboard
-%dir %{_datadir}/hawaii/preferences/org.hawaii.preferences.network
-%{_bindir}/hawaii-system-preferences
-%{_libdir}/hawaii/qml/Hawaii/SystemPreferences/Background/libbackgroundplugin.so
-%{_libdir}/hawaii/qml/Hawaii/SystemPreferences/Background/qmldir
-%{_datadir}/applications/hawaii-*.desktop
-%{_datadir}/hawaii/preferences/org.hawaii.preferences.background/*
-%{_datadir}/hawaii/preferences/org.hawaii.preferences.desktop/*
-%{_datadir}/hawaii/preferences/org.hawaii.preferences.keyboard/*
-%{_datadir}/hawaii/preferences/org.hawaii.preferences.network/*
-%{_datadir}/hawaii-system-preferences/translations/*.qm
+
+%dir %{_datadir}/hawaii-system-preferences/shells/org.hawaii.systempreferences
+%dir %{_datadir}/hawaii-system-preferences/modules/hawaii/org.hawaii.systempreferences.background
+%dir %{_datadir}/hawaii-system-preferences/modules/hawaii/org.hawaii.systempreferences.keyboard
+%{_libdir}/qml/org/hawaii/systempreferences/background/libbackgroundplugin.so
+%{_libdir}/qml/org/hawaii/systempreferences/background/qmldir
+%{_libdir}/qml/org/hawaii/systempreferences/keyboard/libkeyboardplugin.so
+%{_libdir}/qml/org/hawaii/systempreferences/keyboard/qmldir
+%{_datadir}/hawaii-system-preferences/modules/hawaii/org.hawaii.systempreferences.background/*.qml
+%{_datadir}/hawaii-system-preferences/modules/hawaii/org.hawaii.systempreferences.background/metadata.desktop
+%{_datadir}/hawaii-system-preferences/modules/hawaii/org.hawaii.systempreferences.keyboard/*.qml
+%{_datadir}/hawaii-system-preferences/modules/hawaii/org.hawaii.systempreferences.keyboard/metadata.desktop
+%{_datadir}/hawaii-system-preferences/shells/org.hawaii.systempreferences/*.qml
