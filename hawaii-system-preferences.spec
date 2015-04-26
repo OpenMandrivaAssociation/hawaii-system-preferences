@@ -33,7 +33,7 @@ prog %{name} = {
 Hawaii system preferences.
 
 %prep
-%setup -q
+%setup -qn %{name}-%{version}-%{snap}
 
 %build
 %cmake_qt5
