@@ -1,4 +1,4 @@
-%define snap 20150426
+%define snap 20150516
 
 Summary:	Hawaii system preferences
 Name:		hawaii-system-preferences
