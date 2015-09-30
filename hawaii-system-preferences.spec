@@ -42,7 +42,7 @@ Hawaii system preferences.
 %makeinstall_std -C build
 
 %files
-%dir%{_datadir}/hawaii-system-preferences
+%dir %{_datadir}/hawaii-system-preferences
 %dir %{_libdir}/qml/org.hawaiios/systempreferences
 %dir %{_datadir}/hawaii-system-preferences
 %dir %{_datadir}/hawaii-system-preferences/modules
