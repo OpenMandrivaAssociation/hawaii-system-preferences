@@ -2,16 +2,15 @@
 
 Summary:	Hawaii system preferences
 Name:		hawaii-system-preferences
-Version:	0.4.0
-Release:	0.%{snap}.1
+Version:	0.5.0
+Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/Other
 URL:		https://hawaii-desktop.github.io
 # git archive --format=tar --prefix=hawaii-system-preferences-0.4.0-$(date +%Y%m%d)/ HEAD | xz -vf > hawaii-system-preferences-0.4.0-$(date +%Y%m%d).tar.xz
-Source0:	https://github.com/hawaii-desktop/hawaii-desktop/archive/%{name}-%{version}-%{snap}.tar.xz
-#Source0:	https://github.com/hawaii-desktop/hawaii-desktop/archive/%{name}-%{version}.tar.gz
+#Source0:	https://github.com/hawaii-desktop/hawaii-desktop/archive/%{name}-%{version}-%{snap}.tar.xz
+Source0:	https://github.com/hawaii-desktop/hawaii-desktop/archive/%{name}-%{version}.tar.xz
 Source1:	hawaii-system-preferences.rpmlintrc
-BuildRequires:	cmake
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(Qt5Core)
 BuildRequires:	cmake(Qt5Gui)
@@ -33,7 +32,7 @@ prog %{name} = {
 Hawaii system preferences.
 
 %prep
-%setup -qn %{name}-%{version}-%{snap}
+%setup -qn %{name}-%{version}
 
 %build
 %cmake_qt5
