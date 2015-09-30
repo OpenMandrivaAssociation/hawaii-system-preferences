@@ -49,5 +49,6 @@ Hawaii system preferences.
 %dir %{_datadir}/hawaii-system-preferences/shells
 %{_bindir}/hawaii-system-preferences
 %{_libdir}/qml/org.hawaiios/systempreferences/*
+%{_datadir}/applications/*.desktop
 %{_datadir}/hawaii-system-preferences/modules/hawaii
 %{_datadir}/hawaii-system-preferences/shells/org.hawaiios.systempreferences
