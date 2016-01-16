@@ -1,15 +1,13 @@
-%define snap 20150516
-
 Summary:	Hawaii system preferences
 Name:		hawaii-system-preferences
 Version:	0.5.0
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		Graphical desktop/Other
-URL:		https://hawaii-desktop.github.io
+URL:		http://www.hawaiios.org
 # git archive --format=tar --prefix=hawaii-system-preferences-0.4.0-$(date +%Y%m%d)/ HEAD | xz -vf > hawaii-system-preferences-0.4.0-$(date +%Y%m%d).tar.xz
 #Source0:	https://github.com/hawaii-desktop/hawaii-desktop/archive/%{name}-%{version}-%{snap}.tar.xz
-Source0:	https://github.com/hawaii-desktop/hawaii-desktop/archive/%{name}-%{version}.tar.xz
+Source0:	https://github.com/hawaii-desktop/hawaii-system-preferences/releases/download/v%{version}/%{name}-%{version}.tar.xz
 Source1:	hawaii-system-preferences.rpmlintrc
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(Qt5Core)
@@ -23,8 +21,8 @@ BuildRequires:	pkgconfig(polkit-qt5-1)
 
 %track
 prog %{name} = {
-    url = https://github.com/hawaii-desktop/%{name}/archive/
-    regex = "v(__VER__)\.tar\.gz"
+    url = https://github.com/hawaii-desktop/hawaii-system-preferences/releases/download/v%{version}
+    regex = "v(__VER__)\.tar\.xz"
     version = %{version}
 }
 
@@ -32,7 +30,7 @@ prog %{name} = {
 Hawaii system preferences.
 
 %prep
-%setup -qn %{name}-%{version}
+%setup -q
 
 %build
 %cmake_qt5
