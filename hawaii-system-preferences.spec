@@ -40,12 +40,12 @@ Hawaii system preferences.
 %makeinstall_std -C build
 
 %files
-%dir %{_libdir}/qml/org.hawaiios/systempreferences
+%dir %{_libdir}/qml/org/hawaiios/systempreferences
 %dir %{_datadir}/hawaii-system-preferences
 %dir %{_datadir}/hawaii-system-preferences/modules
 %dir %{_datadir}/hawaii-system-preferences/shells
 %{_bindir}/hawaii-system-preferences
-%{_libdir}/qml/org.hawaiios/systempreferences/*
+%{_libdir}/qml/org/hawaiios/systempreferences/*
 %{_datadir}/applications/*.desktop
 %{_datadir}/hawaii-system-preferences/modules/hawaii
 %{_datadir}/hawaii-system-preferences/shells/org.hawaiios.systempreferences
