@@ -1,7 +1,7 @@
 Summary:	Hawaii system preferences
 Name:		hawaii-system-preferences
 Version:	0.6.90
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		Graphical desktop/Other
 URL:		http://www.hawaiios.org
