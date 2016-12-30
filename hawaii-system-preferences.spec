@@ -1,7 +1,7 @@
 Summary:	Hawaii system preferences
 Name:		hawaii-system-preferences
-Version:	0.6.90
-Release:	2
+Version:	0.8.0
+Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/Other
 URL:		http://www.hawaiios.org
@@ -18,6 +18,7 @@ BuildRequires:	cmake(Qt5Quick)
 BuildRequires:	cmake(Qt5LinguistTools)
 BuildRequires:  cmake(KF5Screen)
 BuildRequires:	pkgconfig(polkit-qt5-1)
+BuildRequires:	pkgconfig(GreenIsland)
 
 %track
 prog %{name} = {
