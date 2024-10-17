@@ -4,7 +4,7 @@ Version:	0.8.0
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/Other
-URL:		http://www.hawaiios.org
+URL:		https://www.hawaiios.org
 # git archive --format=tar --prefix=hawaii-system-preferences-0.4.0-$(date +%Y%m%d)/ HEAD | xz -vf > hawaii-system-preferences-0.4.0-$(date +%Y%m%d).tar.xz
 #Source0:	https://github.com/hawaii-desktop/hawaii-desktop/archive/%{name}-%{version}-%{snap}.tar.xz
 Source0:	https://github.com/hawaii-desktop/hawaii-system-preferences/releases/download/v%{version}/%{name}-%{version}.tar.gz
